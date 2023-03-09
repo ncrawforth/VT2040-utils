@@ -31,3 +31,7 @@ MicroPython text editor. Modeless  -  i.e. use cursor keys to move cursor, and t
 >>> from editor import edit
 >>> edit(<filename>)
 ```
+### Limitations
+* No tab support. Tabs are replaced with 2 spaces for now.
+* Unicode probably doesn't work very well yet.
+* There might still be file-corrupting bugs, so the original file is always backed up before saving.
