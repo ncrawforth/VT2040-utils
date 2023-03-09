@@ -19,7 +19,7 @@ To bootstrap:
 >>> s.close()
 >>> f = open("installer.py", "w")
 >>> f.write(d.decode().split("\r\n\r\n")[-1])
-391
+395
 >>> f.close()
 >>> from installer import *
 >>> install("editor.py") # etc.
