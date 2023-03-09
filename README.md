@@ -21,9 +21,13 @@ To bootstrap:
 >>> f.write(d.decode().split("\r\n\r\n")[-1])
 395
 >>> f.close()
->>> from installer import *
->>> install("editor.py") # etc.
 ```
 
 ## editor.py
 MicroPython text editor. Modeless  -  i.e. use cursor keys to move cursor, and type to insert text. Ctrl-D saves and quits, ctrl-C quits without saving.
+``` python
+>>> from installer import install
+>>> install("editor.py")
+>>> from editor import edit
+>>> edit(<filename>)
+```
