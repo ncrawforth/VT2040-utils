@@ -69,7 +69,7 @@ def edit(filename):
       lines[y] = lines[y][:min(x, len(lines[y]))] + "  " + lines[y][x:]
       x += 2
       puts("\x1b[2@")
-    elif c == 13: # Enter
+    elif c == 10: # Enter
       x = min(x, len(lines[y]))
       lines.insert(y + 1, lines[y][x:])
       lines[y] = lines[y][:x]
