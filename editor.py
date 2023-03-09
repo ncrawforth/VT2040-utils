@@ -88,12 +88,12 @@ def edit(filename):
           x = min(len(lines[y]), x + 1)
         elif c == 68: # Cursor left
           x = max(0, min(x, len(lines[y])) - 1)
-        elif c == 49: # Home
+        elif c == 49 or c == 72: # Home
           x = 0
         elif c == 51: # Delete      
           lines[y] = lines[y][:min(x, len(lines[y]))] + lines[y][x + 1:]
           puts("\x1b[P\x1b[9999C", lines[y][left + width - 1:left + width])
-        elif c == 52: # End
+        elif c == 52 or c == 70: # End
           x = len(lines[y])
         elif c == 53: # Page up
           y = max(0, y + 1 - height)
