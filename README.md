@@ -12,11 +12,14 @@ To bootstrap:
 >>> s.connect(a)
 >>> s = ssl.wrap_socket(s)
 >>> s.write("GET /ncrawforth/VT2040-utils/main/installer.py HTTP/1.0\r\n")
+57
 >>> s.write("Host: raw.githubusercontent.com\r\n\r\n")
+35
 >>> d = s.read()
 >>> s.close()
 >>> f = open("installer.py", "w")
 >>> f.write(d.decode().split("\r\n\r\n")[-1])
+391
 >>> f.close()
 >>> from installer import *
 >>> install("editor.py") # etc.
