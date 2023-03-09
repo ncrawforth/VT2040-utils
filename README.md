@@ -26,4 +26,4 @@ To bootstrap:
 ```
 
 ## editor.py
-MicroPython text editor.
+MicroPython text editor. Modeless  -  i.e. use cursor keys to move cursor, and type to insert text. Ctrl-D saves and quits, ctrl-C quits without saving.
