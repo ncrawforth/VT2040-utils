@@ -44,7 +44,7 @@ def get(filename):
   s.close()
   if "encoding" in d and d["encoding"] == "base64":
     f = open(filename, "w")
-    f.write(binascii.a2b_base64(d))
+    f.write(binascii.a2b_base64(d["content"]))
     f.close()
     print(filename + " downloaded.")
   else:
