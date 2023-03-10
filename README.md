@@ -1,6 +1,8 @@
 # VT2040-utils
 A collection of small utilites to turn a [VT2040](/ncrawforth/VT2040) and an ESP8266 running MicroPython into a useful portable computer.
 
+----
+
 ## installer.py
 Download utilities from this GitHub repository over WiFi. You must have connected to a WiFi access point already.
 
@@ -23,6 +25,8 @@ To bootstrap:
 >>> f.close()
 ```
 
+----
+
 ## editor.py
 Simple text editor. Modeless  -  i.e. use cursor keys to move cursor, and type to insert text. Ctrl-D saves and quits, ctrl-C quits without saving.
 
@@ -37,6 +41,8 @@ Simple text editor. Modeless  -  i.e. use cursor keys to move cursor, and type t
 * No tab support. Tabs are replaced with 2 spaces for now.
 * Unicode probably doesn't work very well yet.
 * There might still be file-corrupting bugs, so the original file is always backed up before saving.
+
+----
 
 ## github.py
 List, download, create, update and delete files in a GitHub repository.
