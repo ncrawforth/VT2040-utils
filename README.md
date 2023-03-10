@@ -47,6 +47,11 @@ Simple text editor. Modeless  -  i.e. use cursor keys to move cursor, and type t
 ## github.py
 List, download, create, update and delete files in a GitHub repository.
 
+You need a [personal access token](https://github.com/settings/tokens) with the `workflow` scope. Create a file called `github.json` with your GitHub username, repository name and personal access token:
+``` json
+{"username": "ncrawforth", "repo": "VT2040-utils", "token": "VGhpcyBpcyBub3QgYSByZWFsIHBlcnNvbmFsIGFjY2VzcyB0b2tlbi4="}
+```
+
 ``` python
 >>> from installer import install
 >>> install("github.py")
