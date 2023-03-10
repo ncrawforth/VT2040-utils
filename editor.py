@@ -8,9 +8,12 @@ def edit(filename):
     return ord(sys.stdin.read(1))
 
   # Load file into array
-  f = open(filename, "r")
-  lines = f.readlines()
-  f.close()
+  try:
+    f = open(filename, "r")
+    lines = f.readlines()
+    f.close()
+  except:
+    lines = []
   
   # Strip newlines, carriage returns, trailing whitespace, tabs
   for i in range(len(lines)):
@@ -38,7 +41,7 @@ def edit(filename):
   # Main loop
   while True:
     puts("\x1b[?25l")
-    if lines[-1] != "":
+    if len(lines) == 0 or lines[-1] != "":
       lines.append("")
     if oldy != y and left != 0:
       left = 0
@@ -123,7 +126,10 @@ def edit(filename):
         else:
           top -= 1
   puts("\x1b[9999f\x1bD")
-  os.rename(filename, filename + ".bak")
+  try:
+    os.rename(filename, filename + ".bak")
+  except:
+    pass
   f = open(filename, "w")
   f.write("\n".join(lines))
   f.close()
