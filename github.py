@@ -24,8 +24,13 @@ def list():
   while s.readline() != b"\r\n": pass
   d = json.load(s)
   s.close()
-  for f in d:
-    print(f["name"])
+  if type(d) is type([]):
+    for f in d:
+      print(f["name"])
+  else:
+    print("An error occurred:")
+    print(d)
+    print(type(d))
 
 def get(filename):
   username, repo, auth = _loadconf()
@@ -46,7 +51,7 @@ def get(filename):
     print("An error occurred.")
     print(d)
 
-def put(filename, message):
+def put(filename, message = "Uploaded from my VT2040"):
   username, repo, auth = _loadconf()
   s = _socket()
   s.write("GET /repos/" + username + "/" + repo + "/contents/ HTTP/1.0\r\n")
@@ -72,4 +77,11 @@ def put(filename, message):
   while s.readline() != b"\r\n": pass
   d = json.load(s)
   s.close()
-  print(d)
+  if "content" in d:
+    print(filename + " uploaded.")
+  else:
+    print("An error occurred:")
+    print(d)
+
+def delete(filename, message = "Deleted from my VT2040"):
+  print("Not implemented yet.")
