@@ -1,5 +1,5 @@
 # VT2040-utils
-A collection of small utilites to turn a [VT2040](/ncrawforth/VT2040) and an ESP8266 running MicroPython into a useful portable computer.
+A collection of small utilites to turn a [VT2040](https://github.com/ncrawforth/VT2040) and an ESP8266 running MicroPython into a useful portable computer.
 
 ----
 
