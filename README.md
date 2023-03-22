@@ -61,3 +61,19 @@ You need a [personal access token](https://github.com/settings/tokens) with the 
 >>> github.put(<filename>, [<commit message>])
 >>> github.delete(<filename>, [<commit message>])
 ```
+
+----
+
+## telnets.py
+Under development.
+
+Connect to a telnet server over SSL.
+
+``` python
+>>> from telnets import telnets
+>>> telnets(<hostname>, [port])
+```
+
+### Why not SSH?
+* There isn't a working SSH client for ESP8266 yet.
+* SSL allows for virtual hosts, which is a thing I need.
