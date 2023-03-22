@@ -71,7 +71,7 @@ Connect to a telnet server over SSL.
 
 ``` python
 >>> from telnets import telnets
->>> telnets(<hostname>, [port])
+>>> telnets(<hostname>, [<port>])
 ```
 
 ### Why not SSH?
